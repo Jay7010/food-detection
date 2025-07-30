@@ -14,7 +14,7 @@ import uuid
 # === Constants ===
 IMG_SIZE = 224
 MODEL_PATH = "indian_food_classifier_mobilenetv2acc97.h5"
-CLASS_DIR = "archive\Indian Food Images"
+CLASS_DIR = os.path.join("archive", "Indian Food Images")
 AUDIO_PATH = "recipe_audio.mp3"
 
 # === Load model ===

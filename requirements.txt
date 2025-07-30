@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+python-multipart
+pyttsx3
+tensorflow
+pillow
+cohere
+opencv-python
+numpy

@@ -10,6 +10,7 @@ import cohere
 import pyttsx3
 import cv2
 import uuid
+import traceback
 
 # === Constants ===
 IMG_SIZE = 224
@@ -98,4 +99,7 @@ async def predict(file: UploadFile = File(...)):
         }
 
     except Exception as e:
+        print("=== ERROR TRACEBACK ===")
+        traceback.print_exc()
+        print("=== END TRACEBACK ===")
         return JSONResponse(status_code=500, content={"error": str(e)})

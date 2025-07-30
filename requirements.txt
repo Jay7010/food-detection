@@ -1,7 +1,7 @@
 fastapi
 uvicorn
 python-multipart
-pyttsx3
+gTTS
 tensorflow
 pillow
 cohere

@@ -7,7 +7,7 @@ import numpy as np
 from PIL import Image
 import os
 import cohere
-import pyttsx3
+from gtts import gTTS
 import cv2
 import uuid
 import traceback
@@ -63,9 +63,8 @@ def get_recipe_steps(recipe_name):
 def text_to_speech(text):
     filename = f"{uuid.uuid4().hex}.mp3"
     path = f"static/{filename}"
-    engine = pyttsx3.init()
-    engine.save_to_file(text, path)
-    engine.runAndWait()
+    tts = gTTS(text)
+    tts.save(path)
     return f"/static/{filename}"
 
 # === FastAPI App ===
